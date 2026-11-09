@@ -5,7 +5,7 @@
 :root {
     --base-color: #000000;
     --text-color: #ffffff;
-    --primary-color: #6de69f;
+    --primary-color: #89c4a1;
     --Secondary-color: #518b75;
     --color-1: #f8bd64;
     --color-2: #df944f;
@@ -37,7 +37,6 @@ header {
 body{
     padding: 0px;
     margin: 0px;
-    background-color: var(--base-color);
 }
 
 /* Navbar Styling */
@@ -62,6 +61,33 @@ button {
     cursor: pointer;
     border: none;
     background: none; 
+}
+
+img {
+    width: 100%;
+}
+
+.section-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 2000px;
+
+}
+
+.section-title {
+    text-align: center;
+    padding: 60px 0 100px;
+    font-size: 3rem;
+}
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 1.25em;
+    background-color: var(--Secondary-color);
 }
 
 .navbar .nav-menu .nav-item {
@@ -98,7 +124,7 @@ button {
 .hero-section {
     background-color: var(--base-color);
     min-height: 100vh;
-
+    z-index: -2;
 }
 
 .hero-section .section-content {
@@ -107,6 +133,10 @@ button {
     min-height: 100vh;
     color: white;
     justify-content: space-between;
+}
+
+.hero-section .hero-details {
+        z-index: 2;
 }
 
 .hero-section .hero-details .title {
@@ -151,12 +181,64 @@ button {
     background: transparent;
 }
 
+.hero-section .hero-backfootage {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: 1s ease;
+    filter: blur(12px);
+    object-fit: cover;
+}
+
 /* About Section */
 .about-section {
     padding: 120px 0;
     background-color: var(--primary-color);
-    border: #518b75;
+}
 
+.about-section .section-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-section .about-image-wrapper .about-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.about-section .about-details .text {
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.about-tools {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.about-tools .about-skills {
+    display: flex;
+}
+
+
+.skill-item {
+    border: var(--Secondary-color);
+    padding: 10px 5px;
+    border-radius: 1em;
+    font-family: "Archivo black";
+    font-weight: 200;
+    gap: 20px;
+}
+
+.about-section .about-details .section-title {
+    padding: 0;
 }
 
 @media screen and (max-width: 900px) {  
