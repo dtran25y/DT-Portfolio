@@ -200,7 +200,7 @@ img {
 
 .about-section .section-content {
     display: flex;
-    gap: 50px;
+    gap: 10px;
     align-items: center;
     justify-content: space-between;
 }
@@ -217,28 +217,95 @@ img {
     margin: 50px 0 30px;
     text-align: center;
     font-size: 1.4rem;
+    max-width: 400px;
 }
 
-.about-tools .about-skills {
+.about-tools {
+    transform: translateX(-105px);
+}
+
+.about-section .about-tools .about-skills {
     display: flex;
     border: var(--Secondary-color);
+    background-color: var(--Secondary-color);
     list-style: none;
     justify-content: center;
     align-items: center;
     border-radius: 1em;
 }
+.about-section .about-skills .skill-item {
+    line-height: 30px;
+    margin: 0px 0 0px;
+    text-align: center;
+    max-width: 400px;
 
+    display: flex;
+    border: var(--Secondary-color);
+    background-color: var(--Primary-color);
+    border-radius: 1em;
+}
+
+.about-section .about-tools .about-software {
+    display: flex;
+    border: var(--Secondary-color);
+    background-color: var(--Secondary-color);
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+}
+
+.about-section .about-tools .about-software {
+    line-height: 30px;
+    margin: 0px 0 0px;
+    text-align: center;
+    max-width: 400px;
+
+    display: grid;
+    grid-column: auto;
+    border: var(--Secondary-color);
+    background-color: var(--Primary-color);
+    border-radius: 1em;
+}
+
+.about-section .about-software .software-container {
+    border: var(--Secondary-color);
+    background-color: var(--Secondary-color);
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    padding: 20px 20px 20px;
+}
+
+.about-section .about-software .software-item {
+    line-height: 30px;
+    margin: 0px 0 0px;
+    text-align: center;
+    justify-content: space-between;
+    max-width: 400px;
+
+    display: flex;
+    border: var(--Secondary-color);
+    background-color: var(--Primary-color);
+    border-radius: 1em;
+}
 
 .about-section .about-software .software-icon {
-    height: 200px;
-    width: 200px;
+    translate: 10px -5px;
+    height: 50px;
+    width: 50px;
     border-radius: 1em;
-    border: 0;
-    padding: 5px 0 px;
+    object-fit: contain;
+    background:white;
+    outline: solid;
+    outline-color: var(--primary-color);
+    outline-width: 3px;
+    display: grid;
+    grid-column: auto;
 }
 
 .skill-item {
-    border: var(--Secondary-color);
+    border: var(--secondary-color);
     padding: 10px 5px;
     border-radius: 1em;
     font-family: "Archivo black";
