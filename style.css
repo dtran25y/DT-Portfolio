@@ -218,9 +218,14 @@ img {
     font-size: 1.4rem;
 }
 
-.about-tools {
+.work-project {
     text-decoration: none;
     list-style-type: none;
+
+    padding: 120px 0px 120px;
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    border-radius: 1em;
 }
 
 .about-tools .about-skills {
