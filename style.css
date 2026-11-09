@@ -225,8 +225,21 @@ img {
 
 .about-tools .about-skills {
     display: flex;
+    border: var(--Secondary-color);
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
 }
 
+
+.about-section .about-software .software-icon {
+    height: 200px;
+    width: 200px;
+    border-radius: 1em;
+    border: 0;
+    padding: 5px 0 px;
+}
 
 .skill-item {
     border: var(--Secondary-color);
@@ -239,6 +252,39 @@ img {
 
 .about-section .about-details .section-title {
     padding: 0;
+}
+
+.work-section {
+    text-decoration: none;
+    
+}
+
+.work-section .work-project .section-title {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 2rem;
+    border-color: var(--Primary-color);
+}
+
+.work-section .work-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px
+}
+
+.work-section .work-project .project-video {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    max-width: 500px;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+.work-section .work-container {
+    grid-column: auto;
+    gap: 10px;
 }
 
 @media screen and (max-width: 900px) {  
@@ -314,6 +360,7 @@ img {
         justify-content: center;
     }
 }
+
 
 
 
