@@ -292,6 +292,16 @@ img {
     gap: 10px;
 }
 
+.work-section .work-project .section-title::after {
+    content: "";
+    width: 120px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 1.25em;
+    background-color: var(--Secondary-color);
+}
+
 @media screen and (max-width: 900px) {  
     body.show-mobile-menu header::before{
         content: "";
