@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DT Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+
+                <li class="nav-item">
+                    <a href="index.html#hero" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#my-work" class="nav-link">Projects</a>
+                </li>
+                 <li class="nav-item">
+                    <a href="index.html#contacts" class="nav-link">Contacts</a>
+                </li>
+            </ul>
+
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+    <main>
+        <section class="project-section">
+            <div class="section-content">
+                <h2 class="title">Asteroids but it's a roguelike</h2>
+                <video controls muted plays-inline class="project-video" width = "100%" height="100%">
+                    <source src="images/Pr4Asteroid.webm" type="video/webm">
+                </video>
+                <p class="project-time">Production Time: 2-4 Weeks</p>
+            </div>
+            <div class="project-container">
+                <p class="project-description">This project was made in response to a college brief about creating two mini-project, one of an arcade game with a unique change to gameplay as well as a simple racing game in order to work with Unity's New Input system more confidently. This mini-project successfully utilises both keyboard and controller inputs to mobilise the ship and attack various asteroids. 
+                    <br> <br>My twist on a classic arcade game was to turn 'Asteroids' into a game about progressively collecting upgrade cards every level ,which would get exponentially harder, with the player having been able to keep some of their cards on a complete loss in order to keep progressing higher and higher on each attempt.</p>
+
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>

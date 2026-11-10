@@ -200,7 +200,6 @@ img {
 
 .about-section .section-content {
     display: flex;
-    gap: 10px;
     align-items: center;
     justify-content: space-between;
 }
@@ -210,6 +209,14 @@ img {
     height: 400px;
     object-fit: cover;
     border-radius: 100%;
+    transform: translateX(80px);
+    outline: solid;
+    outline-width: 5px;
+    outline-color: var(--Secondary-color);
+}
+
+.about-section .about-details {
+    transform: translateX(-72px);
 }
 
 .about-section .about-details .text {
@@ -217,7 +224,7 @@ img {
     margin: 50px 0 30px;
     text-align: center;
     font-size: 1.4rem;
-    max-width: 400px;
+    max-width: 600px;
 }
 
 .about-tools {
@@ -318,8 +325,7 @@ img {
 }
 
 .work-section {
-    text-decoration: none;
-    
+    text-decoration: none;   
 }
 
 .work-project {
@@ -337,22 +343,12 @@ img {
 
 .work-section .section-content .section-title::after {
     content: "";
-    width: 80px;
-    height: 5px;
+    width: 500px;
+    height: 10px;
     display: block;
     margin: 10px auto 0;
     border-radius: 1.25em;
-    background-color: var(--Primary-color);    
-}
-
-.work-section .work-project .section-title {
-    text-decoration: none;
-    list-style-type: none;
-    font-size: 2rem;
-    border-color: var(--Primary-color);
-    justify-content: center;
-    align-items: flex-start;
-    transform: translate(0px, -105px);
+    background-color: var(--primary-color);    
 }
 
 .work-section .work-project {
@@ -370,6 +366,7 @@ img {
     grid-column: auto;
     gap: 10px;
     justify-content: space-between;
+    transform: translateY(-50px);
 }
 
 .work-section .work-project .project-video {
@@ -395,6 +392,16 @@ img {
     display: flex;
 }
 
+.work-section .work-project .section-title {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 2rem;
+    border-color: var(--Primary-color);
+    justify-content: center;
+    align-items: flex-start;
+    transform: translate(0px, -105px);
+}
+
 .work-section .work-project .section-title::after {
     content: "";
     width: 120px;
@@ -406,6 +413,57 @@ img {
     transform: translate(0px, 0px);
 }
 
+/* Individual Project Page Section */
+
+.project-section .section-content {
+    display: grid;
+    grid-column: auto;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--Secondary-color);
+    justify-content: space-between;
+}
+
+.project-section .section-content .title{
+    font-size: 1.8rem;
+    color: var(--text-color);
+    font-family: "Archivo black";
+    translate: 40px;
+}
+
+.project-section .section-content .title::after {
+    content: "";
+    width: 500px;
+    height: 10px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 1.25em;
+    background-color: var(--primary-color);
+    transform: translateX(-40px);
+}
+
+.project-section .section-content .project-video {
+    max-width: 550px;
+    max-height: 400px;
+    object-fit: cover;
+    outline-style: solid;
+    outline-width: 8px;
+    border-radius: 1em;
+    outline-color: var(--primary-color);
+    transform: translateY(-80px);
+}
+
+.project-section .section-content .project-time {
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+    font-size: 1.4rem;
+    max-width: 400px;
+}
+
+.project-section .section-content .project-container {
+    
+}
 @media screen and (max-width: 900px) {  
     html, body {
         overflow-x: hidden;
