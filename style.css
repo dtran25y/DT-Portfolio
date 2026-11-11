@@ -28,6 +28,9 @@ h1, h2, h3 {
     font-family: 'Archivo black', "Roboto Mono", sans-serif;
 }
 
+h1 {
+    font-size: 2.5rem;    
+}
 header {
     position: fixed;
     width: 100%;
@@ -187,8 +190,8 @@ img {
     right: 0;
     bottom: 0;
     z-index: 1;
-    transition: 1s ease;
-    filter: blur(12px);
+    transition: 2s ease;
+    filter: blur(6px);
     object-fit: cover;
 }
 
@@ -224,7 +227,7 @@ img {
     margin: 50px 0 30px;
     text-align: center;
     font-size: 1.4rem;
-    max-width: 600px;
+    max-width: 700px;
 }
 
 .about-tools {
@@ -382,8 +385,10 @@ img {
 .work-section .work-project .text {
     transform: translate(0px, -155px);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 450px;
 }
 
 .work-section .work-project .production-text {
@@ -411,6 +416,25 @@ img {
     border-radius: 1.25em;
     background-color: var(--Secondary-color);
     transform: translate(0px, 0px);
+}
+
+.work-container .work-project .project-link {
+    display: inline-block;
+    border: 2px solid transparent;
+    padding: 10px 26px;
+    color: var(--primary-color);
+    border-radius: .5em;
+    border-color: var();
+    background-color: var(--Secondary-color);
+    font-weight: 350;
+    transition: 0.3s ease;
+    font-size: 1.25rem;
+}
+
+.work-container .work-project .project-link:hover {
+    color: white;
+    border-color: white;
+    background: transparent;
 }
 
 /* Individual Project Page Section */
@@ -461,6 +485,7 @@ img {
     font-size: 1.4rem;
     max-width: 400px;
 }
+
 @media screen and (max-width: 900px) {  
     html, body {
         overflow-x: hidden;
@@ -605,9 +630,6 @@ header img{
     flex: 0 1 34em;
 }
 
-h1 {
-    font-size: 2.5rem;
-}
 
 /*
 .text-container p {

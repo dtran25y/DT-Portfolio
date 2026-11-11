@@ -45,7 +45,7 @@
                         <a href="#my-work" class="cta-button">My Work</a>
                     </div>
                 </div>
-                <video autoplay loop muted plays-inline class="hero-backfootage" width="100%">
+                <video autoplay loop muted plays-inline class="hero-backfootage" width="100%" id="hero-video">
                     <source src="images/ML.webm" type="video/webm">
                 </video>
             </div>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="about-details">
                     <h2 class="section-title">About Me</h2>
-                    <p class="text">Game Design / Development student learning to program in Unity. Currently working with rendering pipelines alongside gameplay as my specialism with various uses in industry software. Projects here have been completed within a higher education. Please check out my work below! </p>
+                    <p class="text">Game Design / Development student learning to program in Unity. Currently working with rendering pipelines alongside gameplay as my specialism with various uses in industry software. I've worked with Adobe software and also 3D software such as Maya or Blender, although not frequently but am familiar with their workflows and pipelines. Projects here have been completed within a higher education. Please check out my work below! </p>
                 </div>
                 <div class="about-tools">
                     <h1 class="section-title">Skills</h1>
@@ -123,6 +123,10 @@
         </section> 
     </main>
     <script src="script.js"></script>
+    <script>
+        let video = document.getElementById("hero-video");
+        video.playbackRate = 2;
+    </script>
 
 
 <!--            <div class="flex-container">
