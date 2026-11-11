@@ -448,22 +448,30 @@ img {
     justify-content: space-between;
 }
 
+.project-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+
+
 .project-section .section-content .title{
     font-size: 1.8rem;
     color: var(--text-color);
     font-family: "Archivo black";
     translate: 40px;
+    order: 1;
+
 }
 
 .project-section .section-content .title::after {
     content: "";
     width: 500px;
     height: 10px;
-    display: block;
+    display: inline-block;
     margin: 10px auto 0;
     border-radius: 1.25em;
     background-color: var(--primary-color);
-    transform: translateX(-40px);
 }
 
 .project-section .section-content .project-video {
@@ -474,16 +482,70 @@ img {
     outline-width: 8px;
     border-radius: 1em;
     outline-color: var(--primary-color);
-    transform: translateY(-70px);
+    transform: translateY(-40px);
+    order: 2;
 }
 
-.project-section .section-content .project-time {
+.project-section .section-content .project-overview {
     line-height: 30px;
     margin: 50px 0 30px;
     text-align: center;
-    font: 200;
+    font: 400;
     font-size: 1.4rem;
     max-width: 400px;
+    color: white;
+}
+
+.project-section .section-content .project-skills-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    order: 3;
+}
+
+.project-section .project-container .software-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.project-section .section-content ,.project-overview {
+    order: 4;
+}
+
+.project-section .section-content .project-image-1 {
+    order: 5;
+    max-width: fit-content;
+    max-height: fit-content;
+    outline: solid;
+    outline-color: var(--primary-color);
+}
+
+.project-section .section-content .project-description {
+    line-height: 20px;
+    font: 200;
+    font-size: minMax(1.5rem , 8%);
+
+}
+
+
+
+
+.project-section .software-container .software-item {
+    max-width: fit-content;
+}
+
+.project-section .software-container .software-icon {
+    border-radius: 1em;
+    object-fit: contain;
+    background:white;
+    outline: solid;
+    outline-color: var(--primary-color);
+    outline-width: 3px;
+    display: grid;
+    grid-column: auto;
 }
 
 @media screen and (max-width: 900px) {  
