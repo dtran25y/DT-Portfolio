@@ -344,8 +344,8 @@ img {
 
 .showreel-section .section-title::after {
     content: "";
-    width: 400px;
-    height: 10px;
+    width: 120px;
+    height: 5px;
     display: block;
     margin: 10px auto 0;
     border-radius: 1.25em;
@@ -387,6 +387,14 @@ img {
     outline-color: var(--color-3);
 }
 
+.work-section .section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+}
+
 /* bug here (affects both the project titles and section title, seperate them) */
 .work-section .section-content .section-title {
     text-decoration: none;
@@ -399,13 +407,32 @@ img {
 
 .work-section .section-content .section-title::after {
     content: "";
+    width: 400px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 1.25em;
+    background-color: var(--Secondary-color);
+}
+
+.work-section .section-content .title {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 3rem;
+    border-color: var(--Primary-color);
+    justify-content: center;
+    align-items: flex-start;
+    transform: translateY(-40px);
+}
+
+.work-section .section-content .title::after {
+    content: "";
     width: 120px;
     height: 5px;
     display: block;
-    margin: 5px auto 0;
+    margin: 10px auto 0;
     border-radius: 1.25em;
-    background-color: var(--Secondary-color);
-    transform: translate(0px, 0px);
+    background-color: var(--primary-color);
 }
 
 .work-section .work-project {
@@ -428,8 +455,8 @@ img {
 
 .work-section .work-project .project-video {
     transform: translate(0px, -180px);
-    max-width: 550px;
-    max-height: 600px;
+    max-width: 450px;
+    max-height: 400px;
     object-fit: cover;
     outline-style: solid;
     outline-width: 8px;
@@ -484,7 +511,28 @@ img {
     background: transparent;
 }
 
-/* Contact page Sec
+/* Contact page Section */
+
+/*
+.contact-section .section-content {
+
+}
+.contact-section .section-title::after {
+    content: "";
+    width: 120px;
+    height: 5px;
+    display: block;
+    margin: 5px auto 0;
+    border-radius: 1.25em;
+    background-color: var(--primary-color);
+}
+
+*/
+
+footer {
+    padding: 3px;
+    color: var(--primary-color);
+}
 
 /* Individual Project Page Section */
 
@@ -528,7 +576,6 @@ img {
     outline-width: 8px;
     border-radius: 1em;
     outline-color: var(--primary-color);
-
 }
 
 .project-section .project-container .project-overview::before {
