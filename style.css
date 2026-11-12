@@ -327,6 +327,49 @@ img {
     padding: 0;
 }
 
+/* Showreel Section */
+
+.showreel-section {
+    padding: 120px 0;
+    background-color: var(--Secondary-color);
+}
+
+.showreel-section .section-title {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 3rem;
+    justify-content: center;
+    align-items: flex-start;   
+}
+
+.showreel-section .section-title::after {
+    content: "";
+    width: 400px;
+    height: 10px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 1.25em;
+    background-color: var(--primary-color);    
+}
+
+.showreel-section .showreel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.showreel-section .showreel-container .showreel-footage {
+    height: minMax(500px, 75%);
+    width: minMax(800px 75%);
+    object-fit: cover;
+    outline: solid;
+    outline-width: 5px;
+    border-radius: 1em;
+    outline-color: var(--primary-color)
+}
+/* My Work Section */
+
 .work-section {
     text-decoration: none;   
 }
@@ -344,22 +387,33 @@ img {
     outline-color: var(--color-3);
 }
 
+/* bug here (affects both the project titles and section title, seperate them) */
+.work-section .section-content .section-title {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 2rem;
+    border-color: var(--Primary-color);
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .work-section .section-content .section-title::after {
     content: "";
-    width: 500px;
-    height: 10px;
+    width: 120px;
+    height: 5px;
     display: block;
-    margin: 10px auto 0;
+    margin: 5px auto 0;
     border-radius: 1.25em;
-    background-color: var(--primary-color);    
+    background-color: var(--Secondary-color);
+    transform: translate(0px, 0px);
 }
 
 .work-section .work-project {
-    justify-content: space-between;
-    align-items: center;
     display: flex;
     flex-direction: column;
-
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
 }
 
 .work-section .work-container {
@@ -398,13 +452,7 @@ img {
 }
 
 .work-section .work-project .section-title {
-    text-decoration: none;
-    list-style-type: none;
-    font-size: 2rem;
-    border-color: var(--Primary-color);
-    justify-content: center;
-    align-items: flex-start;
-
+    transform: translateY(-100px);
 }
 
 .work-section .work-project .section-title::after {
@@ -415,7 +463,6 @@ img {
     margin: 5px auto 0;
     border-radius: 1.25em;
     background-color: var(--Secondary-color);
-    transform: translate(0px, 0px);
 }
 
 .work-container .work-project .project-link {
@@ -436,6 +483,8 @@ img {
     border-color: white;
     background: transparent;
 }
+
+/* Contact page Sec
 
 /* Individual Project Page Section */
 
@@ -534,13 +583,29 @@ img {
     outline-color: var(--primary-color);
 }
 
-.project-section .project-container .project-description {
+.project-details {
+    /*
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    max-width: minMax(600px , 70%);
+    */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 8px;
+}
+
+.project-section .project-description {
     line-height: 20px;
     font: 200;
     font-size: minMax(1.5rem , 8%);
 
 }
-
 
 
 
