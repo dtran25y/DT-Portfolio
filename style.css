@@ -661,7 +661,6 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: minMax(500px, 95%);
     margin: 50px 0 0;
     gap: 2em;
 }
@@ -758,22 +757,82 @@ img {
 
 }
 
-.project-section .software-container .software-item {
-    max-width: fit-content;
+.project-details .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
 }
 
-.project-section .software-container .software-icon {
+.project-details .image-container .project-image {
+    max-width: 400px;
+    max-height: 300px;
+    outline: solid;
+    outline-color: var(--primary-color);  
+}
+
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.info-section .section-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.info-section .software-container {
+    border: var(--primary-color);
+    background-color: var(--primary-color);
+    list-style: none;
+    justify-content: center;
+    align-items: center;
     border-radius: 1em;
-    object-fit: cover;
+    padding: 20px 20px 20px;
+}
+
+.info-section .software-container .software-item {
+    line-height: 30px;
+    margin: 0px 0 0px;
+    text-align: center;
+    font-weight: 1000;
+    max-width: 400px;
+
+    display: flex;
+    border: var(--Secondary-color);
+    background-color: var(--Primary-color);
+    border-radius: 1em;
+}
+
+.info-section .software-container .software-icon {
+    translate: 10px -5px;
+    height: 50px;
+    width: 50px;
+    border-radius: 1em;
+    object-fit: contain;
     background:white;
     outline: solid;
-    outline-color: var(--primary-color);
+    outline-color: var(--Secondary-color);
     outline-width: 3px;
     display: grid;
     grid-column: auto;
-    height: 100px;
-    width: 100px;
 }
+
+.github-repo-container {
+    border: var(--primary-color);
+    background-color: var(--primary-color);
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    padding: 20px 20px 20px;
+}
+
 /*
 .project-section .project-container .software-container {
     display: flex;
