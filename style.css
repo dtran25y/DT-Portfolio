@@ -811,9 +811,11 @@ img {
 
 .info-section .software-container .software-icon {
     translate: 10px -5px;
-    height: 50px;
-    width: 50px;
-    border-radius: 1em;
+    height: 40px;
+    width: 40px;
+    align-self: center;
+
+    border-radius: 0.5em;
     object-fit: contain;
     background:white;
     outline: solid;

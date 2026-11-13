@@ -6,6 +6,32 @@
     <title>DT Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .project-image {
+            max-width: 400px;
+            max-height: 300px;
+            outline: solid;
+            outline-color: var(--primary-color);  
+        }
+        .fullsize {
+            z-index: 10;
+            cursor: zoom-out;
+            display: block;
+            width: 800px;
+            height: 600px;
+            position: fixed;
+            left: 200px;
+            top: 50px;
+
+            outline: solid;
+            outline-color: var(--primary-color); 
+            outline-width: 10px;
+        }
+
+
+    </style>
 </head>
 <body>
     <!-- Header / Navbar -->
@@ -45,12 +71,16 @@
                         The overall project is meant to build a stronger portfolio (with one Teacher-led project and one project of my own) that will help prepare me for the industry by researching jobs and the kinds of skills they require in their description. <br> <br> 
                         "Escape Flood 3" is a mini-project that is built in mind with developing the skills I lack strength in. Therefore, the week prior to production was spent looking into the job market, until I started ideating my personal project during production which was based on my own research into the job market and what kind of role I wanted to get into from the gaming industry, which was a blend of gameplay programming and graphics programming as well, using node graphs and HLSL. <br> </p>
                     <p><br></p>
-
                     <div class="image-container">
-                        <input type="checkbox" name="" id="zoom_img">
-                        <img src="images/SkillResearch1.webp" alt="" class="project-image" id="img1">
-                        <img src="images/SkillResearch2.webp" alt="" class="project-image" id="img2">
-                        <img src="images/SkillResearch3.webp" alt="" class="project-image" id="img3">
+                        <img src="images/SkillResearch1.webp" alt="" class="project-image" id="img1" onclick="change(this)">
+                        <img src="images/SkillResearch2.webp" alt="" class="project-image" id="img2" onclick="change(this)">
+                        <img src="images/SkillResearch3.webp" alt="" class="project-image" id="img3" onclick="change(this)">
+                    </div>
+                    <div class="project-details"> 
+                        <p class="project-description"><br> After the career research, I went ahead and started working on the player and most important features for the first week such as the movement, camera and rising-water Object. <br> <br>
+                        ThePlayer movement relies on character controller component Then I went ahead and worked on the shaders for the water that would rise and drown the player if beneath it. <br> <br>
+                    The most challenging aspect would be having to learn the pipeline behind creating this shader, which took quite a while to get a grasp on and cut back on most features I wanted like custom VFX for the players mobility, especially with HLSL being a difficult task to learn as a whole new language to add, despite it's familiar syntax to ones I already know. <br> <br>
+                    The water shader was both inspired by my influence and was overall designed around recreating a believably realstic creation of water.</p>
                     </div>
                 <div class="project-extra">
                     <a href="#" class="github-link"></a>
@@ -76,7 +106,10 @@
                             </li>   
                             <li class="software-item">Blender
                                 <img src="images/Blender_logo_no_text.svg.webp" alt="Blender-icon" class="software-icon">
-                            </li>                                                     
+                            </li>                                  
+                            <li class="software-item">Maya
+                                <img src="images/autodesk-maya.png" alt="Maya-icon" class="software-icon">
+                            </li>                   
                         </ul>                      
                     </div>
                 </div>
@@ -110,4 +143,9 @@
         </footer>  
     </main>
     <script src="script.js"></script>
+    <script>
+        function change(element) {
+            element.classList.toggle(".fullsize")
+        }
+    </script>
 </body>
