@@ -371,8 +371,8 @@ img {
 }
 
 .showreel-section .showreel-container .showreel-footage {
-    height: minMax(500px, 75%);
-    width: minMax(800px 75%);
+    height: 800px;
+    width: 1600px;
     object-fit: cover;
     outline: solid;
     outline-width: 5px;
@@ -925,6 +925,17 @@ img {
     .hero-section .hero-details .buttons {
         justify-content: center;
     }
+
+    .about-section .section-content {
+        gap: 50px;
+        text-align: center;
+        padding: 30px 20px 20x;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+
+
 }
 
 
