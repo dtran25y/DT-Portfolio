@@ -6,34 +6,104 @@
     <title>DT Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-
-    <style>
-
-        .project-image {
-            max-width: 400px;
-            max-height: 300px;
-            outline: solid;
-            outline-color: var(--primary-color);  
-        }
-        .fullsize {
-            z-index: 10;
-            cursor: zoom-out;
-            display: block;
-            width: 800px;
-            height: 600px;
-            position: fixed;
-            left: 200px;
-            top: 50px;
-
-            outline: solid;
-            outline-color: var(--primary-color); 
-            outline-width: 10px;
-        }
-
-
-    </style>
 </head>
+<style>
+    div.project-image {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+        border: 1px solid #ccc;
+    }
+    div.project-image:hover {
+        border: 1px solid #777;
+    }
+
+
+    .responsive {
+        padding: 0 6px;
+        float: left;
+        width: 24.99999%;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 50;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.9);
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+
+    .modal-content, #caption {  
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+        from {transform:scale(0)} 
+        to {transform:scale(1)}
+    }
+
+    @keyframes zoom {
+        from {transform:scale(0.1)} 
+        to {transform:scale(1)}
+    }
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    @media only screen and (max-width: 700px){
+        .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+    .modal-content {
+        width: 100%;
+    }
+    }
+
+    @media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+    }
+
+    .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
 <body>
+        <script src="script.js"></script>
     <!-- Header / Navbar -->
     <header>
         <nav class="navbar">
@@ -72,15 +142,26 @@
                         "Escape Flood 3" is a mini-project that is built in mind with developing the skills I lack strength in. Therefore, the week prior to production was spent looking into the job market, until I started ideating my personal project during production which was based on my own research into the job market and what kind of role I wanted to get into from the gaming industry, which was a blend of gameplay programming and graphics programming as well, using node graphs and HLSL. <br> </p>
                     <p><br></p>
                     <div class="image-container">
-                        <img src="images/SkillResearch1.webp" alt="" class="project-image" id="img1" onclick="change(this)">
-                        <img src="images/SkillResearch2.webp" alt="" class="project-image" id="img2" onclick="change(this)">
-                        <img src="images/SkillResearch3.webp" alt="" class="project-image" id="img3" onclick="change(this)">
+                        <div class="project-image"><div class="responsive"><img src="images/SkillResearch1.webp" alt=""></div></div>
+                        <div class="project-image"><div class="responsive"><img src="images/SkillResearch2.webp" alt=""></div></div>
+                        <div class="project-image"><div class="responsive"><img src="images/SkillResearch3.webp" alt=""></div></div>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div id="myModal" class="modal">
+                        <span class="close">×</span>
+                        <img class="modal-content" id="img01">
+                        <div id="caption"></div>
                     </div>
                     <div class="project-details"> 
-                        <p class="project-description"><br> After the career research, I went ahead and started working on the player and most important features for the first week such as the movement, camera and rising-water Object. <br> <br>
-                        ThePlayer movement relies on character controller component Then I went ahead and worked on the shaders for the water that would rise and drown the player if beneath it. <br> <br>
+                        <p class="project-description"><br> This Research is detailing the 3 skills I want to develop throughout my mini-project which are the following: Graphics Programming, VFX Work, Gameplay Programming. <br> <br>
+                            So with my MVP, I envisioned a player with more advanced movement scripts than usual such as diving or rolling, in addition to working on realistic water shaders and grass to show proven work of graphics programming. As for VFXs, I intended to create custom effects and particles for the player to deduce their movement such as dust trails and such to enhance the feel and visual clarity of gameplay to player. <br> <br>
+                            After the career research, I went ahead and started working on the player and most important features for the first week such as the movement, camera and rising-water Object. <br> <br>
+                        The player movement relies on character controller component Then I went ahead and worked on the shaders for the water that would rise and drown the player if beneath it. <br> <br>
                     The most challenging aspect would be having to learn the pipeline behind creating this shader, which took quite a while to get a grasp on and cut back on most features I wanted like custom VFX for the players mobility, especially with HLSL being a difficult task to learn as a whole new language to add, despite it's familiar syntax to ones I already know. <br> <br>
                     The water shader was both inspired by my influence and was overall designed around recreating a believably realstic creation of water.</p>
+
                     </div>
                 <div class="project-extra">
                     <a href="#" class="github-link"></a>
@@ -121,6 +202,29 @@
             -->
             </div>
         </section>
+        <script>
+            var modal = document.getElementById('myModal');
+            var span = document.getElementsByClassName("close")[0];
+
+            span.onclick = function() { 
+            modal.style.display = "none";
+            }
+            // Get all images and insert the clicked image inside the modal
+            // Get the content of the image description and insert it inside the modal image caption
+            var images = document.getElementsByTagName('img');
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            var i;
+
+            for (i = 0; i < images.length; i++) {
+                images[i].onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    modalImg.alt = this.alt;
+                    captionText.innerHTML = this.nextElementSibling.innerHTML;
+                }
+            }
+        </script>
         <footer class="footer-section">
             <div class="section-content">
                 <div class="social-link-list">
@@ -142,10 +246,4 @@
             </div>
         </footer>  
     </main>
-    <script src="script.js"></script>
-    <script>
-        function change(element) {
-            element.classList.toggle(".fullsize")
-        }
-    </script>
 </body>
