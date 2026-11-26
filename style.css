@@ -46,7 +46,6 @@ body{
 .zoomD {
     width: auto;
     height: 200px;
-    /* ease | ease-in | ease-out | linear */
     transition: all ease-in-out 0.4s;
     cursor: zoom-in;
 }
@@ -62,8 +61,6 @@ body{
     visibility: hidden;
     opacity: 0;
     transition: all ease-in-out 0.4s;
-    /* ease | ease-in | ease-out | linear
-    transition: transform ease-in-out 0.5s; */
 }
 
 #lb-back.show {
@@ -71,7 +68,6 @@ body{
     opacity: 1;
 }
 
-/* LIGHTBOX IMAGE */
 #lb-img {
     position: relative;
     top: 50%;
@@ -80,13 +76,6 @@ body{
 }
 
 #lb-img img {
-    /* FULL WIDTH IMAGE
-    width: 100%;
-    height: auto;
-    cursor: zoom-out; 
-    */
-
-    /* MAX WIDTH 1200px IMAGE */
     width: 100%;
     max-width: 1200px;
     height: auto;
@@ -729,6 +718,24 @@ img {
     content: "";
     width: 500px;
     height: 10px;
+    display: block;
+    border-radius: 1.25em;
+    background-color: var(--primary-color);
+
+}
+
+.project-section .project-container .sub-title {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-family: "Archivo black";
+    text-align: center;
+}
+
+
+.project-section .project-container .sub-title::after {
+    content: "";
+    width: 200px;
+    height: 5px;
     display: block;
     border-radius: 1.25em;
     background-color: var(--primary-color);

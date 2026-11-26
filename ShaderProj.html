@@ -9,23 +9,44 @@
 </head>
 <style>
     div.project-image {
-        width: 100%;
+        box-sizing: border-box;
+        width: 400px;
         height: auto;
         cursor: pointer;
         border: 1px solid #ccc;
     }
+
     div.project-image:hover {
         border: 1px solid #777;
     }
 
+    .pro-img {
+        box-sizing: border-box;
+        height: 300px;
+        width: 400px;
+        transform: translateX(-7px);
+    }
+
+    div.desc {
+        padding: 15px;
+        text-align: center;
+        justify-content: center;
+        align-self: center;
+        display: none;
+    }
 
     .responsive {
+        box-sizing: border-box;
         padding: 0 6px;
         float: left;
         width: 24.99999%;
+        display: flex;
+        flex-direction: column;
+        
     }
 
     .modal {
+        box-sizing: border-box;
         display: none;
         position: fixed;
         z-index: 50;
@@ -40,10 +61,23 @@
     }
 
     .modal-content {
+        box-sizing: border-box;
         margin: auto;
         display: block;
         width: 80%;
         max-width: 700px;
+    }
+
+    #caption {
+        box-sizing: border-box; 
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
     }
 
     .modal-content, #caption {  
@@ -141,28 +175,47 @@
                         The overall project is meant to build a stronger portfolio (with one Teacher-led project and one project of my own) that will help prepare me for the industry by researching jobs and the kinds of skills they require in their description. <br> <br> 
                         "Escape Flood 3" is a mini-project that is built in mind with developing the skills I lack strength in. Therefore, the week prior to production was spent looking into the job market, until I started ideating my personal project during production which was based on my own research into the job market and what kind of role I wanted to get into from the gaming industry, which was a blend of gameplay programming and graphics programming as well, using node graphs and HLSL. <br> </p>
                     <p><br></p>
-                    <div class="image-container">
-                        <div class="project-image"><div class="responsive"><img src="images/SkillResearch1.webp" alt=""></div></div>
-                        <div class="project-image"><div class="responsive"><img src="images/SkillResearch2.webp" alt=""></div></div>
-                        <div class="project-image"><div class="responsive"><img src="images/SkillResearch3.webp" alt=""></div></div>
-                    </div>
-
-                    <div class="clearfix"></div>
-
-                    <div id="myModal" class="modal">
-                        <span class="close">×</span>
-                        <img class="modal-content" id="img01">
-                        <div id="caption"></div>
-                    </div>
+                    <h2 class="sub-title">Research:</h2>
                     <div class="project-details"> 
-                        <p class="project-description"><br> This Research is detailing the 3 skills I want to develop throughout my mini-project which are the following: Graphics Programming, VFX Work, Gameplay Programming. <br> <br>
+                        <p class="project-description">
+                            This research I conducted is detailing the 3 skills I want to develop throughout my mini-project which are the following: Shading & Lighting with GPU-based Shaders, VFX Work in 3D, and working with a different engine or working with a different port such as mobile. <br> <br>
                             So with my MVP, I envisioned a player with more advanced movement scripts than usual such as diving or rolling, in addition to working on realistic water shaders and grass to show proven work of graphics programming. As for VFXs, I intended to create custom effects and particles for the player to deduce their movement such as dust trails and such to enhance the feel and visual clarity of gameplay to player. <br> <br>
-                            After the career research, I went ahead and started working on the player and most important features for the first week such as the movement, camera and rising-water Object. <br> <br>
-                        The player movement relies on character controller component Then I went ahead and worked on the shaders for the water that would rise and drown the player if beneath it. <br> <br>
-                    The most challenging aspect would be having to learn the pipeline behind creating this shader, which took quite a while to get a grasp on and cut back on most features I wanted like custom VFX for the players mobility, especially with HLSL being a difficult task to learn as a whole new language to add, despite it's familiar syntax to ones I already know. <br> <br>
-                    The water shader was both inspired by my influence and was overall designed around recreating a believably realstic creation of water.</p>
-
+                            I ultimately decided that it would be better to work on the first two skills as they coincide more intristically with the GPU rendering pipeline and felt much more realstic to complete this mini-project of 3 weeks instead of trying to cram every improvement I possibly need and call it quits. This allowed me to focus more heavily of learning and getting to use Unity's particle system (which I had used previously in few instances), HLSL, shader graphs, and VFX graphs and get a grasp on these tools for future projects. <br> <br> 
+                            As for my third skill (working with different languages and engines / porting to different platforms), it was something I have to consider in another project as trying to learn rendering with Shaders and VFX with an unfamiliar game engine would be more unecessary confusion and labour on myself. This  I'd also have to understand their workspace and architecture, as I still choose to work in Unity for the time-being until I'm willing to explore other engines such as Unreal.
+                        </p>
                     </div>
+                    <p>Click on the images to zoom in! <br><br></p>
+                    <div class="image-container">
+                        <div class="project-image"><div class="responsive">
+                            <img src="images/SkillResearch1.webp" alt="" class="pro-img">
+                            <div class="desc">Careers Skill Research 1:</div>
+                        </div>
+                    </div>
+                        <div class="project-image"><div class="responsive">
+                            <img src="images/SkillResearch2.webp" alt="" class="pro-img">
+                            <div class="desc">Careers Skill Research 2:</div>
+                        </div>
+                    </div>
+                        <div class="project-image"><div class="responsive">
+                            <img src="images/SkillResearch3.webp" alt="" class="pro-img">
+                            <div class="desc">Careers Skill Research 3:</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div id="myModal" class="modal">
+                    <span class="close">×</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+                <div class="project-details">
+                    <p class="project-description"> <br>
+                    After the career research, I went ahead and started working on the player and most important features for the first week such as the movement, camera and rising-water Object. <br> <br>
+                    The player movement relies on character controller component Then I went ahead and worked on the shaders for the water that would rise and drown the player if beneath it. <br> <br>
+                    The most challenging aspect would be having to learn the pipeline behind creating this shader, which took quite a while to get a grasp on and cut back on most features I wanted like custom VFX for the players mobility, especially with HLSL being a difficult task to learn as a whole new language to add, despite it's familiar syntax to ones I already know. <br> <br>
+                    The water shader was both inspired by my influence and was overall designed around recreating a believably realstic creation of water.
+                    </p>
+                </div>
                 <div class="project-extra">
                     <a href="#" class="github-link"></a>
                     <a href="#" class="project-dc"></a>
@@ -222,6 +275,7 @@
                     modalImg.src = this.src;
                     modalImg.alt = this.alt;
                     captionText.innerHTML = this.nextElementSibling.innerHTML;
+                    captionText.style.display = "block";
                 }
             }
         </script>
