@@ -812,7 +812,7 @@ img {
 .project-section .project-description {
     line-height: 20px;
     font: 200;
-    font-size: minMax(1.5rem , 8%);
+    font-size: minMax(2rem , 20%);
 
 }
 

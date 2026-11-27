@@ -42,7 +42,6 @@
         width: 24.99999%;
         display: flex;
         flex-direction: column;
-        
     }
 
     .modal {
@@ -175,7 +174,7 @@
                         The overall project is meant to build a stronger portfolio (with one Teacher-led project and one project of my own) that will help prepare me for the industry by researching jobs and the kinds of skills they require in their description. <br> <br> 
                         "Escape Flood 3" is a mini-project that is built in mind with developing the skills I lack strength in. Therefore, the week prior to production was spent looking into the job market, until I started ideating my personal project during production which was based on my own research into the job market and what kind of role I wanted to get into from the gaming industry, which was a blend of gameplay programming and graphics programming as well, using node graphs and HLSL. <br> </p>
                     <p><br></p>
-                    <h2 class="sub-title">Research:</h2>
+                    <h2 class="sub-title">Career Research:</h2>
                     <div class="project-details"> 
                         <p class="project-description">
                             This research I conducted is detailing the 3 skills I want to develop throughout my mini-project which are the following: Shading & Lighting with GPU-based Shaders, VFX Work in 3D, and working with a different engine or working with a different port such as mobile. <br> <br>
@@ -208,12 +207,22 @@
                     <img class="modal-content" id="img01">
                     <div id="caption"></div>
                 </div>
+                <h2 class="sub-title">Production:</h2>
                 <div class="project-details">
                     <p class="project-description"> <br>
                     After the career research, I went ahead and started working on the player and most important features for the first week such as the movement, camera and rising-water Object. <br> <br>
-                    The player movement relies on character controller component Then I went ahead and worked on the shaders for the water that would rise and drown the player if beneath it. <br> <br>
-                    The most challenging aspect would be having to learn the pipeline behind creating this shader, which took quite a while to get a grasp on and cut back on most features I wanted like custom VFX for the players mobility, especially with HLSL being a difficult task to learn as a whole new language to add, despite it's familiar syntax to ones I already know. <br> <br>
-                    The water shader was both inspired by my influence and was overall designed around recreating a believably realstic creation of water.
+                    The player movement relies on character controller component, which doesn't use full physics simulations such as rigidbodies. This allowed me to have complete control over the player in terms of velocity, gravity, and everything to do with movement, without being completely affected by any external forces such as how a rigidbody would interact.<br><br>
+                    This makes it great for my timed 3D platformer, as having much more fluid movement that is less likely to feel interrupted is something I think is essential to the concept. However, this meant that I had to code my own logic and physics to the player with advanced movements in mind. I managed to get most of the functions full working, yet I still had to cut crouching and rolling from my game to save on time due to the other tasks at hand. Still, this part of the mini-project was a great chance to put my problem-solving skills at the test, as it really challenged my ability as a mathmetician in terms of how I could possibly simulate the player physics which strengthen my programming skills overall. <br> <br>
+                    
+                    Then I went ahead and worked on the shaders for the water that would rise and drown the player if beneath it. The script itself was easy, making the 'waterObject' translate up with a speed calculated to how mcuh time should be given for each level, and if the palyer falls beneath a certain Y-level under the water (e.g. the player object transform.y is 5.0f lower than the water), the player would be deleted and restart the level. <br> <br>
+                    I would have definetely made this a much more sophisticated mechanic such as drowning and giving the player a visible health / oxygen meter, however with the time I had this would be a less concerning goal in mind of the main purpose of this project (to learn how to create VFX and Shaders).<br> <br>
+                    The most challenging aspect would be having to learn GPU Rendering Pipeline on Unity itself, which took quite a while to get a grasp on and cut back on most features I wanted like custom VFX for the players mobility, especially with HLSL being a difficult task to learn as a whole new language to add, despite it's familiar syntax to ones I already know. <br> <br>
+                    The water shader was both inspired by my influence and was overall designed around recreating a believably realstic creation of water, which was created with node graphs. One thing it does well is that it successfully recreates the distortion of water through noise maps, waves through normal maps, and customisation over the attributes listed below: <br> <br>
+
+                    However, where it falls short is how ineffective it becomes when viewing objects beneath much greater depth, as I feel I haven't changed the depth fade just enough in the final product with such a lighter colour to replicate seawater, as this depth-based shader was more designed around a more tropical site which appears more green on the surface level. <br> <br>
+                    The next big task in this project to tackle would be the Grass shaders, which was a different beast entirely! <br><br>
+
+                    I used a variety of tools and shaders to create this one effect which took most of my effort and dedication between the second and third week of production. This is where I finally started to experiment and learn within HLSL in order to create a compute shader for the grass which
                     </p>
                 </div>
                 <div class="project-extra">
